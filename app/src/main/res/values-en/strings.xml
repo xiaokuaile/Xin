@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="receive_label">Save to Xin</string>
+    <string name="tile_label">Save clipboard</string>
+
+    <string name="saved">Saved to Xin</string>
+    <string name="saved_existing">Already in Xin, moved to top</string>
+    <string name="clipboard_empty">No text on the clipboard</string>
+    <string name="copied">Copied</string>
+    <string name="deleted">Deleted</string>
+    <string name="undo">Undo</string>
+    <string name="no_app">No app can open this</string>
+
+    <string name="search">Search</string>
+    <string name="search_hint">Search clipboard history</string>
+    <string name="clear_search">Clear</string>
+    <string name="back">Back</string>
+    <string name="more">More</string>
+
+    <string name="filter_all">All</string>
+    <string name="filter_pinned">Pinned</string>
+    <string name="filter_links">Links</string>
+
+    <string name="empty_all">Nothing here yet.\nCopy text in any app and come back to Xin to save it, or add the \"Save clipboard\" tile to Quick Settings.</string>
+    <string name="empty_pinned">Tap the pin next to an item to keep it here. Pinned items are never cleared.</string>
+    <string name="empty_links">Links you copy will show up here.</string>
+    <string name="empty_search">No matches</string>
+
+    <string name="new_clip">New</string>
+    <string name="edit">Edit</string>
+    <string name="edit_hint">Type text to save</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="copy">Copy</string>
+    <string name="pin">Pin</string>
+    <string name="unpin">Unpin</string>
+    <string name="share">Share</string>
+    <string name="delete">Delete</string>
+    <string name="open_link">Open link</string>
+    <string name="dial">Call</string>
+    <string name="send_email">Send email</string>
+    <string name="char_count">%d chars</string>
+
+    <string name="clear">Clear</string>
+    <string name="clear_unpinned">Clear unpinned</string>
+    <string name="clear_unpinned_message">This deletes all history that isn\'t pinned. Pinned items stay.</string>
+
+    <string name="shortcut_new">New</string>
+    <string name="shortcut_search">Search</string>
+</resources>

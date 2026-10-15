@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Xin" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/xin_background</item>
+    </style>
+
+    <style name="Theme.Xin.Transparent" parent="android:Theme.Translucent.NoTitleBar">
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+</resources>

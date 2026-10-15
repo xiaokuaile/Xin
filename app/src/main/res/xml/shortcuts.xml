@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_new"
+        android:shortcutId="new"
+        android:shortcutShortLabel="@string/shortcut_new">
+        <intent
+            android:action="com.xiaokuaile.xin.action.NEW"
+            android:targetClass="com.xiaokuaile.xin.ui.MainActivity"
+            android:targetPackage="com.xiaokuaile.xin" />
+    </shortcut>
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_search"
+        android:shortcutId="search"
+        android:shortcutShortLabel="@string/shortcut_search">
+        <intent
+            android:action="com.xiaokuaile.xin.action.SEARCH"
+            android:targetClass="com.xiaokuaile.xin.ui.MainActivity"
+            android:targetPackage="com.xiaokuaile.xin" />
+    </shortcut>
+</shortcuts>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Xin</string>
+    <string name="receive_label">存到 Xin</string>
+    <string name="tile_label">存剪贴板</string>
+
+    <string name="saved">已存到 Xin</string>
+    <string name="saved_existing">已在 Xin 里，移到最前</string>
+    <string name="clipboard_empty">剪贴板里没有文字</string>
+    <string name="copied">已复制</string>
+    <string name="deleted">已删除</string>
+    <string name="undo">撤销</string>
+    <string name="no_app">没有可以打开它的应用</string>
+
+    <string name="search">搜索</string>
+    <string name="search_hint">搜索剪贴板历史</string>
+    <string name="clear_search">清除</string>
+    <string name="back">返回</string>
+    <string name="more">更多</string>
+
+    <string name="filter_all">全部</string>
+    <string name="filter_pinned">收藏</string>
+    <string name="filter_links">链接</string>
+
+    <string name="empty_all">还没有内容。\n在任何应用里复制文字，回到 Xin 就会自动收录；也可以在下拉菜单里添加“存剪贴板”磁贴。</string>
+    <string name="empty_pinned">点每条内容右边的图钉，就能收藏到这里。收藏的内容不会被清空。</string>
+    <string name="empty_links">复制过的网址会出现在这里。</string>
+    <string name="empty_search">没有找到匹配的内容</string>
+
+    <string name="new_clip">新建</string>
+    <string name="edit">编辑</string>
+    <string name="edit_hint">输入要保存的文字</string>
+    <string name="save">保存</string>
+    <string name="cancel">取消</string>
+    <string name="copy">复制</string>
+    <string name="pin">收藏</string>
+    <string name="unpin">取消收藏</string>
+    <string name="share">分享</string>
+    <string name="delete">删除</string>
+    <string name="open_link">打开链接</string>
+    <string name="dial">拨打电话</string>
+    <string name="send_email">发送邮件</string>
+    <string name="char_count">%d 字</string>
+
+    <string name="clear">清空</string>
+    <string name="clear_unpinned">清空未收藏</string>
+    <string name="clear_unpinned_message">将删除所有没有收藏的历史，收藏的内容会保留。</string>
+
+    <string name="shortcut_new">新建</string>
+    <string name="shortcut_search">搜索</string>
+</resources>
