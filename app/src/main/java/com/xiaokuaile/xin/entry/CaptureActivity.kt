@@ -25,14 +25,14 @@ class CaptureActivity : ComponentActivity() {
         super.onWindowFocusChanged(hasFocus)
         if (!hasFocus || handled) return
         handled = true
-        val text = SystemClipboard.read(this)
-        if (text == null) {
+        val item = SystemClipboard.read(this)
+        if (item == null) {
             Toast.makeText(this, R.string.clipboard_empty, Toast.LENGTH_SHORT).show()
             finish()
             return
         }
         lifecycleScope.launch {
-            val isNew = (application as XinApp).repository.save(text)
+            val isNew = (application as XinApp).repository.save(item.text, item.html)
             Toast.makeText(
                 this@CaptureActivity,
                 if (isNew) R.string.saved else R.string.saved_existing,

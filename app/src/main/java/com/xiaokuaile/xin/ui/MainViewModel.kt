@@ -6,6 +6,7 @@ import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import com.xiaokuaile.xin.XinApp
+import com.xiaokuaile.xin.clipboard.ClipboardText
 import com.xiaokuaile.xin.data.Clip
 import com.xiaokuaile.xin.data.ClipFilter
 import com.xiaokuaile.xin.data.ClipRepository
@@ -31,10 +32,10 @@ class MainViewModel(private val repository: ClipRepository) : ViewModel() {
     private var lastCaptured: String? = null
 
     /** 应用回到前台时调用，把剪贴板里的新内容收进历史。 */
-    fun captureFromClipboard(text: String?) {
-        if (text == null || text == lastCaptured) return
-        lastCaptured = text
-        viewModelScope.launch { repository.save(text) }
+    fun captureFromClipboard(item: ClipboardText?) {
+        if (item == null || item.text == lastCaptured) return
+        lastCaptured = item.text
+        viewModelScope.launch { repository.save(item.text, item.html) }
     }
 
     /** 从 Xin 里复制出去的内容，回到前台时不需要再收录一次。 */

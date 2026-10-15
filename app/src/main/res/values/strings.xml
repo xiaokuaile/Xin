@@ -48,4 +48,30 @@
 
     <string name="shortcut_new">新建</string>
     <string name="shortcut_search">搜索</string>
+
+    <string name="poster_title">文字转图片</string>
+    <string name="poster_open">转成图片</string>
+    <string name="poster_hint">粘贴或输入文字。从网页、聊天里复制的带颜色文字，颜色会原样保留。</string>
+    <string name="poster_paste">粘贴</string>
+    <string name="poster_add_image">图片</string>
+    <string name="poster_text_color">文字颜色</string>
+    <string name="poster_style">样式</string>
+    <string name="poster_save">保存到相册</string>
+    <string name="poster_saved">已保存到相册（Pictures/Xin）</string>
+    <string name="poster_save_failed">保存失败，请重试</string>
+    <string name="poster_need_permission">需要存储权限才能保存到相册</string>
+    <string name="poster_empty">先输入一些文字或插入图片</string>
+    <string name="poster_select_first">先选中要上色的文字</string>
+    <string name="poster_image_failed">读取不到这张图片</string>
+    <string name="poster_color_reset">恢复默认颜色</string>
+    <string name="poster_background">背景</string>
+    <string name="poster_font_size">字号</string>
+    <string name="poster_footer">底部显示日期和 Xin</string>
+    <string name="poster_theme_paper">白纸</string>
+    <string name="poster_theme_cream">米黄</string>
+    <string name="poster_theme_night">深色</string>
+    <string name="poster_size_small">小</string>
+    <string name="poster_size_medium">中</string>
+    <string name="poster_size_large">大</string>
+    <string name="shortcut_poster">文字转图片</string>
 </resources>

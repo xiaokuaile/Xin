@@ -13,6 +13,7 @@ import androidx.compose.material.icons.filled.ContentCopy
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Email
+import androidx.compose.material.icons.filled.Image
 import androidx.compose.material.icons.filled.Phone
 import androidx.compose.material.icons.filled.PushPin
 import androidx.compose.material.icons.filled.Share
@@ -43,6 +44,7 @@ fun ClipActionsSheet(
     onCopy: () -> Unit,
     onTogglePin: () -> Unit,
     onEdit: () -> Unit,
+    onMakeImage: () -> Unit,
     onDelete: () -> Unit,
 ) {
     val context = LocalContext.current
@@ -79,6 +81,7 @@ fun ClipActionsSheet(
                 if (clip.pinned) R.string.unpin else R.string.pin,
             ) { act(onTogglePin) }
             ActionItem(Icons.Filled.Edit, R.string.edit) { act(onEdit) }
+            ActionItem(Icons.Filled.Image, R.string.poster_open) { act(onMakeImage) }
             ActionItem(Icons.Filled.Share, R.string.share) {
                 act {
                     val send = Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT, clip.content)

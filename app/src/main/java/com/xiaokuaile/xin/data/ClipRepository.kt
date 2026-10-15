@@ -11,16 +11,16 @@ class ClipRepository(private val dao: ClipDao) {
     )
 
     /** 保存一条内容；已存在则移到最前。返回 true 表示是新内容。 */
-    suspend fun save(raw: String): Boolean {
+    suspend fun save(raw: String, html: String? = null): Boolean {
         val content = raw.trimEnd()
         if (content.isBlank()) return false
         val now = System.currentTimeMillis()
         val existing = dao.findByContent(content)
         if (existing != null) {
-            dao.update(existing.copy(updatedAt = now))
+            dao.update(existing.copy(html = html ?: existing.html, updatedAt = now))
             return false
         }
-        dao.insert(Clip(content = content, createdAt = now))
+        dao.insert(Clip(content = content, html = html, createdAt = now))
         dao.trimUnpinned(MAX_UNPINNED)
         return true
     }
@@ -34,9 +34,12 @@ class ClipRepository(private val dao: ClipDao) {
             dao.update(clash.copy(pinned = clash.pinned || clip.pinned, updatedAt = System.currentTimeMillis()))
             dao.delete(clip.id)
         } else {
-            dao.update(clip.copy(content = content, kind = ClipKind.detect(content), updatedAt = System.currentTimeMillis()))
+            // 文字改过之后原来的格式对不上了，只保留纯文字
+            dao.update(clip.copy(content = content, html = null, kind = ClipKind.detect(content), updatedAt = System.currentTimeMillis()))
         }
     }
+
+    suspend fun get(id: Long): Clip? = dao.get(id)
 
     suspend fun togglePin(clip: Clip) = dao.update(clip.copy(pinned = !clip.pinned))
 

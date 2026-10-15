@@ -14,6 +14,8 @@ enum class ClipKind {
 data class Clip(
     @PrimaryKey(autoGenerate = true) val id: Long = 0,
     val content: String,
+    /** 复制时带的 HTML 格式（颜色、粗体等），没有就是 null。 */
+    val html: String? = null,
     val kind: ClipKind = ClipKind.detect(content),
     val pinned: Boolean = false,
     val createdAt: Long = System.currentTimeMillis(),

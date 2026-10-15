@@ -23,6 +23,9 @@ interface ClipDao {
     @Query("SELECT * FROM clips WHERE content = :content LIMIT 1")
     suspend fun findByContent(content: String): Clip?
 
+    @Query("SELECT * FROM clips WHERE id = :id")
+    suspend fun get(id: Long): Clip?
+
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insert(clip: Clip): Long
 
