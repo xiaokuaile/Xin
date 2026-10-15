@@ -23,7 +23,8 @@ class ReceiveActivity : ComponentActivity() {
             return
         }
         lifecycleScope.launch {
-            (application as XinApp).repository.save(text)
+            val html = if (intent.action == Intent.ACTION_SEND) intent.getStringExtra(Intent.EXTRA_HTML_TEXT) else null
+            (application as XinApp).repository.save(text, html)
             Toast.makeText(this@ReceiveActivity, R.string.saved, Toast.LENGTH_SHORT).show()
             finish()
         }

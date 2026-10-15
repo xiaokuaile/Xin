@@ -47,4 +47,30 @@
 
     <string name="shortcut_new">New</string>
     <string name="shortcut_search">Search</string>
+
+    <string name="poster_title">Text to image</string>
+    <string name="poster_open">Make image</string>
+    <string name="poster_hint">Paste or type text. Colors in text copied from web pages or chats are kept.</string>
+    <string name="poster_paste">Paste</string>
+    <string name="poster_add_image">Image</string>
+    <string name="poster_text_color">Text color</string>
+    <string name="poster_style">Style</string>
+    <string name="poster_save">Save to gallery</string>
+    <string name="poster_saved">Saved to gallery (Pictures/Xin)</string>
+    <string name="poster_save_failed">Couldn\'t save, please try again</string>
+    <string name="poster_need_permission">Storage permission is needed to save to the gallery</string>
+    <string name="poster_empty">Add some text or an image first</string>
+    <string name="poster_select_first">Select the text to color first</string>
+    <string name="poster_image_failed">Couldn\'t read this image</string>
+    <string name="poster_color_reset">Default color</string>
+    <string name="poster_background">Background</string>
+    <string name="poster_font_size">Text size</string>
+    <string name="poster_footer">Show date and Xin at the bottom</string>
+    <string name="poster_theme_paper">Paper</string>
+    <string name="poster_theme_cream">Cream</string>
+    <string name="poster_theme_night">Dark</string>
+    <string name="poster_size_small">Small</string>
+    <string name="poster_size_medium">Medium</string>
+    <string name="poster_size_large">Large</string>
+    <string name="shortcut_poster">Text to image</string>
 </resources>

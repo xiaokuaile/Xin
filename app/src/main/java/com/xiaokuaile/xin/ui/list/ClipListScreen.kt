@@ -16,6 +16,7 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.outlined.Image
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
@@ -60,6 +61,7 @@ import com.xiaokuaile.xin.data.ClipFilter
 import com.xiaokuaile.xin.ui.LaunchAction
 import com.xiaokuaile.xin.ui.MainViewModel
 import com.xiaokuaile.xin.ui.edit.EditClipDialog
+import com.xiaokuaile.xin.ui.poster.PosterActivity
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -89,7 +91,7 @@ fun ClipListScreen(
     val undoLabel = stringResource(R.string.undo)
 
     fun copy(clip: Clip) {
-        SystemClipboard.write(context, clip.content)
+        SystemClipboard.write(context, clip.content, clip.html)
         viewModel.markCopied(clip.content)
         scope.launch {
             snackbar.currentSnackbarData?.dismiss()
@@ -161,6 +163,9 @@ fun ClipListScreen(
                         containerColor = MaterialTheme.colorScheme.background,
                     ),
                     actions = {
+                        IconButton(onClick = { context.startActivity(PosterActivity.intent(context)) }) {
+                            Icon(Icons.Outlined.Image, stringResource(R.string.poster_title))
+                        }
                         IconButton(onClick = { searching = true }) {
                             Icon(Icons.Filled.Search, stringResource(R.string.search))
                         }
@@ -223,6 +228,7 @@ fun ClipListScreen(
             onCopy = { copy(clip) },
             onTogglePin = { viewModel.togglePin(clip) },
             onEdit = { editing = EditTarget.Existing(clip) },
+            onMakeImage = { context.startActivity(PosterActivity.intent(context, clip.id)) },
             onDelete = { delete(clip) },
         )
     }

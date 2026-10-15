@@ -20,4 +20,14 @@
             android:targetClass="com.xiaokuaile.xin.ui.MainActivity"
             android:targetPackage="com.xiaokuaile.xin" />
     </shortcut>
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_poster"
+        android:shortcutId="poster"
+        android:shortcutShortLabel="@string/shortcut_poster">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.xiaokuaile.xin.ui.poster.PosterActivity"
+            android:targetPackage="com.xiaokuaile.xin" />
+    </shortcut>
 </shortcuts>
